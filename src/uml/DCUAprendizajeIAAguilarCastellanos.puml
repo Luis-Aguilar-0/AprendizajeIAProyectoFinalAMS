@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+actor "Alumno" as alumno
+actor "Agente IA" as ia
+
+package "Aprendizaje IA" {
+  usecase "Registrarse e Iniciar Sesión" as UC1
+  usecase "Visualizar Dashboard" as UC2
+  usecase "Tomar Lección" as UC3
+  usecase "Resolver Evaluación" as UC4
+  usecase "Consultar Duda Técnica" as UC5
+}
+
+alumno --> UC1
+alumno --> UC2
+alumno --> UC3
+alumno --> UC4
+alumno --> UC5
+
+UC5 <-- ia : "Genera respuesta"
+@enduml

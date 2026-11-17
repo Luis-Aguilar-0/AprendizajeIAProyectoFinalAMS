@@ -1,0 +1,23 @@
+@startuml
+start
+:Usuario inicia sesión;
+:Visualiza Dashboard;
+:Selecciona Módulo disponible;
+:Lee contenido / Reproduce video;
+
+if (¿Usuario presenta dudas?) then (si)
+   :Resuelve dudas con el Agente de IA;
+  :Agente procesa prompt (Spring AI);
+  :Agente devuelve respuesta;
+else (no)
+   :Inicia Evaluación del módulo;
+  :Responde cuestionario;
+endif
+
+if (¿Calificación >= Mínimo Aprobatorio?) then (Sí)
+  :Desbloquear siguiente Módulo;
+else (No)
+  :Sugerir repaso de la lección;
+endif
+stop
+@enduml

@@ -1,0 +1,53 @@
+@startuml
+hide circle
+skinparam linetype ortho
+
+entity "USUARIO" as user {
+  * id_usuario : INTEGER <<PK>>
+  --
+  nombre : VARCHAR(100)
+  email : VARCHAR(150)
+  contrasena : VARCHAR(255)
+  fecha_registro : DATE
+}
+
+entity "MODULO" as mod {
+  * id_modulo : INTEGER <<PK>>
+  --
+  titulo : VARCHAR(150)
+  orden : INTEGER
+  requiere_aprobacion : BOOLEAN
+}
+
+entity "LECCION" as lec {
+  * id_leccion : INTEGER <<PK>>
+  * id_modulo : INTEGER <<FK>>
+  --
+  titulo : VARCHAR(150)
+  contenido : TEXT
+  url_video : VARCHAR(255)
+}
+
+entity "PROGRESO" as prog {
+  * id_progreso : INTEGER <<PK>>
+  * id_usuario : INTEGER <<FK>>
+  * id_modulo : INTEGER <<FK>>
+  --
+  calificacion : INTEGER
+  completado : BOOLEAN
+}
+
+entity "CHAT_INTERACCION" as chat {
+  * id_chat : INTEGER <<PK>>
+  * id_usuario : INTEGER <<FK>>
+  --
+  prompt_usuario : TEXT
+  respuesta_ia : TEXT
+  fecha_hora : DATE
+}
+
+user ||--o{ prog : registra
+mod ||--o{ prog : evalua
+mod ||--|{ lec : contiene
+user ||--o{ chat : realiza
+@enduml

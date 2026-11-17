@@ -1,0 +1,21 @@
+@startgantt
+
+title Diagrama de Gantt - Proyecto Edu-IA (SCRUM)
+
+-- Sprint 1: Autenticación, Perfil y Gestión Educativa --
+[Análisis de Requerimientos, Diseño UML y BD PostgreSQL] Lasts 3 days
+[HU-01: Registro e inicio de sesión seguro (Spring Security)] Lasts 3 days and starts at [Análisis de Requerimientos, Diseño UML y BD PostgreSQL]'s end
+[HU-02: Visualización de dashboard de avance] Lasts 2 days and starts at [HU-01: Registro e inicio de sesión seguro (Spring Security)]'s end
+[HU-03: Lectura secuencial de módulos y lecciones] Lasts 3 days and starts at [HU-02: Visualización de dashboard de avance]'s start
+[HU-04: Resolución de cuestionarios autocalificables] Lasts 3 days and starts at [HU-03: Lectura secuencial de módulos y lecciones]'s end
+[Demostración Sprint 1 (Review)] Happens at [HU-04: Resolución de cuestionarios autocalificables]'s end
+
+-- Sprint 2: Asistente Virtual IA (Spring AI) y Estabilización --
+[TASK-01: Configurar API Key y dependencias Spring AI] Lasts 1 days and starts at [Demostración Sprint 1 (Review)]'s end
+[TASK-02: Crear ChatController, ChatService] Lasts 3 days and starts at [TASK-01: Configurar API Key y dependencias Spring AI]'s end
+[TASK-03: Diseñar vista interactiva de chat en Thymeleaf] Lasts 2 days and starts at [TASK-02: Crear ChatController, ChatService]'s start
+[HU-05: Integrar endpoint de chat contextual con Spring AI] Lasts 2 days and starts at [TASK-02: Crear ChatController, ChatService]'s end
+[BUG-01: Corregir desbordamiento en respuestas largas del bot] Lasts 1 days and starts at [HU-05: Integrar endpoint de chat contextual con Spring AI]'s end
+[Demostración Final MVP (Review & Retro)] Happens at [BUG-01: Corregir desbordamiento en respuestas largas del bot]'s end
+
+@endgantt

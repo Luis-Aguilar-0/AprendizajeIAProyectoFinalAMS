@@ -1,0 +1,44 @@
+@startuml
+
+class Usuario {
+  - id: Int
+  - nombre: String
+  - email: String
+  - contrasena: String
+  - fechaRegistro: LocalDate
+  + iniciarSesion(): boolean
+  + consultarAvance(): float
+  + listarModulos()
+}
+
+class Modulo {
+  - id: Int
+  - titulo: String
+  - requiereAprobacion: boolean
+  + listarLecciones(): List<Leccion>
+}
+
+class Leccion {
+  - id: Int
+  - titulo: String
+  - contenido: String
+  - urlVideo: String
+  + marcarCompletada()
+  + marcarProgreso()
+}
+
+
+
+class ChatInteraccion {
+  - id: Long
+  - promptUsuario: String
+  - respuestaIA: String
+  - fechaHora: LocalDateTime
+  + enviarPrompt()
+}
+
+Usuario "1" *-- "1..*" Modulo : contiene >
+Modulo "1" *-- "1..*" Leccion : contiene >
+Usuario "1" -- "0..*" ChatInteraccion : interactua con >
+
+@enduml
