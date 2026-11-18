@@ -21,7 +21,7 @@ La rápida adopción de modelos de lenguaje (LLMs) y agentes automatizados en el
 
 ##  Arquitectura
 
-El proyecto sigue una arquitectura limpia en capas (`Controller`, `Service`, `Repository`, `Model`, `Config`):
+El proyecto sigue una arquitectura: 
 
 * **Backend:** Java, Spring Boot `4.1.1`
 * **Inteligencia Artificial:** Spring AI (compatible con proveedores como OpenAI, Google Gemini y DeepSeek).
@@ -39,3 +39,9 @@ El esquema relacional consta de **5 entidades principales** normalizadas:
 * `leccion`: Contenido teórico y multimedia asociado a cada módulo.
 * `progreso`: Tabla intermedia que registra calificaciones y estado de aprobación por usuario y módulo.
 * `chat_interaccion`: Historial de *prompts* y respuestas generadas por el agente de IA.
+
+## Los diagramas UML del proyecto se encuentra en la carpeta /demo/docs/
+
+* En la carpeta docs encontrara: 
+* **Diagramas UML: Diagrama de casos de uso, diagrama de clases**
+* **Diagramas scrum: Diagrama scrum, diagrama entidad relacion**

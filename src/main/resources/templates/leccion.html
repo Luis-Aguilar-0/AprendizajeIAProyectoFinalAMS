@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendizaje IA | Lección</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <!-- Barra Superior -->
+    <header class="top-navbar">
+        <a th:href="@{/paginaPrincipal}" class="brand-title">Aprendizaje IA</a>
+
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="search">
+        </div>
+
+        <div style="display: flex; align-items: center;">
+            <nav class="nav-pills">
+                <a th:href="@{/paginaPrincipal}">Inicio</a>
+                <a th:href="@{/leccion}" class="active">Chat IA</a>
+                <a th:href="@{/}">Cerrar Sesión</a>
+            </nav>
+            <span class="nav-menu-dots">⋮</span>
+        </div>
+    </header>
+
+    <!-- Contenido Dividido -->
+    <main class="lesson-layout">
+        <!-- Columna Izquierda -->
+        <section class="lesson-left">
+            <div class="lesson-intro-header">
+                <h2>Introducción acerca de la lección</h2>
+            </div>
+
+            <div class="video-placeholder">
+                <h3 style="margin-bottom: 0.75rem;">Contenido Multimedia / Teórico</h3>
+                <p style="color: #475569; font-size: 0.95rem;">
+                    En esta lección aprenderás las reglas clave sobre confidencialidad y protección de datos personales al interactuar con agentes de IA Generativa.
+                </p>
+            </div>
+             <div class="lesson-progress-container">
+                    <span>Progreso</span>
+                    <div class="progress-wrapper">
+                        <div class="progress-bar-fill" style="width: 60%;"></div>
+                    </div>
+            </div>
+
+            <div>
+                <button type="button" class="btn-dark btn-disabled" disabled>Sección de preguntas</button>
+            </div>
+        </section>
+
+        <!-- Columna Derecha: Boceto del Agente de IA -->
+        <aside class="lesson-right">
+            <h3>Dudas de la lección</h3>
+            <div class="ai-chat-panel">
+                <div class="ai-messages">
+                    <div class="msg-ia">
+                        pregunta a la IA sobre cualquier duda de esta lección...
+                    </div>
+                </div>
+                <div class="ai-input-row">
+                    <input type="text" placeholder="pregunta a la IA">
+                    <button type="button" class="btn-dark">Enviar</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

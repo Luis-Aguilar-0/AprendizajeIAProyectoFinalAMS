@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendizaje IA | Módulos</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <!-- Barra Superior -->
+    <header class="top-navbar">
+        <a th:href="@{/paginaPrincipal}" class="brand-title">Aprendizaje IA</a>
+
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="search">
+        </div>
+
+        <div style="display: flex; align-items: center;">
+            <nav class="nav-pills">
+                <a th:href="@{/paginaPrincipal}" class="active">Inicio</a>
+                <a th:href="@{/leccion}">Chat IA</a>
+                <a th:href="@{/}">Cerrar Sesión</a>
+            </nav>
+            <span class="nav-menu-dots">⋮</span>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <h2 class="section-heading">Modulos</h2>
+
+        <div class="modules-grid">
+            <!-- Módulo 1 -->
+            <a th:href="@{/leccion}" class="module-item">
+                <div class="module-box">
+                    <h3>1. Tipos de IA Generativa</h3>
+                    <p>Arquitecturas LLMs y agentes de autorespuesta.</p>
+                </div>
+                <div class="progress-wrapper">
+                    <div class="progress-bar-fill" style="width: 95%;"></div>
+                    <span class="progress-label">95%</span>
+                </div>
+            </a>
+
+            <!-- Módulo 2 -->
+            <a th:href="@{/leccion}" class="module-item">
+                <div class="module-box">
+                    <h3>2. Prompt Engineering</h3>
+                    <p>Buenas prácticas y prevención de alucinaciones.</p>
+                </div>
+                <div class="progress-wrapper">
+                    <div class="progress-bar-fill" style="width: 25%;"></div>
+                    <span class="progress-label">25%</span>
+                </div>
+            </a>
+
+            <!-- Módulo 3 -->
+            <a th:href="@{/leccion}" class="module-item">
+                <div class="module-box">
+                    <h3>3. Ética y Sesgos</h3>
+                    <p>Identificación y mitigación de sesgos algorítmicos.</p>
+                </div>
+                <div class="progress-wrapper">
+                    <div class="progress-bar-fill" style="width: 0%;"></div>
+                    <span class="progress-label">0%</span>
+                </div>
+            </a>
+
+            <!-- Módulo 4 -->
+            <a th:href="@{/leccion}" class="module-item">
+                <div class="module-box">
+                    <h3>4. Privacidad de Datos</h3>
+                    <p>Protección de información confidencial en prompts.</p>
+                </div>
+                <div class="progress-wrapper">
+                    <div class="progress-bar-fill" style="width: 95%;"></div>
+                    <span class="progress-label">95%</span>
+                </div>
+            </a>
+
+            <!-- Módulo 5 -->
+            <a th:href="@{/leccion}" class="module-item">
+                <div class="module-box">
+                    <h3>5. Derechos de Autor</h3>
+                    <p>Propiedad intelectual en contenidos generados.</p>
+                </div>
+                <div class="progress-wrapper">
+                    <div class="progress-bar-fill" style="width: 25%;"></div>
+                    <span class="progress-label">25%</span>
+                </div>
+            </a>
+
+            <!-- Módulo 6 -->
+            <a th:href="@{/leccion}" class="module-item">
+                <div class="module-box">
+                    <h3>6. Normatividad Vigente</h3>
+                    <p>Regulación internacional sobre sistemas de IA.</p>
+                </div>
+                <div class="progress-wrapper">
+                    <div class="progress-bar-fill" style="width: 0%;"></div>
+                    <span class="progress-label">0%</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="pagination-controls">
+            <button type="button" class="btn-dark">Siguiente</button>
+            <button type="button" class="btn-dark">Anterior</button>
+        </div>
+    </main>
+</body>
+</html>
